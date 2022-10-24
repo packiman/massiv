@@ -57,7 +57,7 @@ public class StatsService {
     public int DownAverage(int[] month) {
         int variable = 0;
         for (int i = 0; i < month.length; i++) {
-            if (month[i] > month[variable]) {
+            if (month[i] > AverageSumMonth(month)) {
                 variable++;
             }
         }
@@ -68,7 +68,7 @@ public class StatsService {
     public int UpAverage(int[] month) {
         int variable = 0;
         for (int i = 0; i < month.length; i++) {
-            if (month[i] < month[variable]) {
+            if (month[i] < AverageSumMonth(month)) {
                 variable++;
             }
         }
